@@ -58,8 +58,28 @@ function numOfDays(month, leapYear) {
     return `${month} has 28 days.`;
     break;
   default:
-      throw new Error('Please use a valid month.');
-    }
+    throw new Error('Please use a valid month.');
   }
+}
 
-console.log(numOfDays('steven', true));
+
+
+const computerNum = Math.floor(Math.random() * 3) + 1;
+
+function rockPaperScissors(humanNumber) {
+  let computer = computerNum;
+  let humanNum = Math.floor(humanNumber);
+  if (humanNum > 3 || humanNum < 1) {
+    throw new Error('Please choose a valid number!');
+  } else if (humanNum === 1 && computer === 2) {
+    return 'The human wins!';
+  } else if (humanNum === 2 && computer === 3) {
+    return 'The human wins!';
+  } else if (humanNum === 3 && computer === 1) {
+    return 'The human wins!';
+  } else {
+    return 'The computer wins!';
+  }
+}
+
+console.log(rockPaperScissors());
